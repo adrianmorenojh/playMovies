@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
+import { fadeIn } from '../../styles/Animation'
 
 export const Movie = styled.div`
   background-color: #dfe2e5;
@@ -16,6 +17,7 @@ export const Image = styled.img`
   width: 280px;
   height: 300px;
   border-radius: 5px;
+${fadeIn('30s')}
 `
 export const P = styled.p`
 font-size:12px;

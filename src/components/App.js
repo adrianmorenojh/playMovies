@@ -6,6 +6,7 @@ import { Router } from '@reach/router'
 import { Detail } from '../pages/Detail'
 import { MovieList } from './MovieList'
 import { Results } from './Results'
+import { Register } from '../pages/Register'
 
 export default () => {
   return (
@@ -17,6 +18,7 @@ export default () => {
         <Detail path='/detail/:id/' />
         <MovieList path='/category/:category/' />
         <Results path='/results/:search' />
+        <Register path='/register/' />
 
       </Router>
     </>
