@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../Context/ContextAuth'
 import { Container, Span, H3, Image, Info, Button, ConfigButton, Icon, H1, H2 } from './styles'
 
 export const User = () => {
+  const user = JSON.parse(window.sessionStorage.getItem('user'))
+  console.log(user)
+  const { removeAuth } = useContext(Context)
   return (
     <Container>
       <H1>User</H1>
@@ -10,17 +14,17 @@ export const User = () => {
         alt=''
       />
       <H2>
-        Ferchete
+        {user.data.user}
       </H2>
       <Info>
-        <H3><Span>Nombre :</Span> Luis casique</H3>
-        <H3><Span>Email :</Span> tupapitorico@gmail.com</H3>
+        <H3><Span>Nombre :</Span> {user.data.name}</H3>
+        <H3><Span>Email :</Span> {user.data.email}</H3>
       </Info>
       <ConfigButton>
           configuraciones.
         <Icon src='../../../public/assets/images/configuration.svg' />
       </ConfigButton>
-      <Button>
+      <Button onClick={removeAuth}>
           Cerrar Sesion.
       </Button>
     </Container>

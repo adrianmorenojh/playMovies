@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 340px;
-  display: grid;
+  max-width:340px;
+  display: block;
   margin: 15px auto;
   text-align: center;
   box-shadow: 0 0 5px;
@@ -18,6 +19,7 @@ export const Image = styled.img`
 
 export const Info = styled.div`
   text-align: left;
+  overflow-wrap: break-word;
 `
 
 export const Span = styled.span`
@@ -27,11 +29,11 @@ export const Span = styled.span`
 `
 export const H3 = styled.h3`
     margin: 0 0 10px 0;
-    height: 30px;
-    width: 100%;
-    padding:0 25px;
-    box-sizing:border-box;
+    width: 98%;
+    max-width:340px;
     font-size:1.1em;
+    overflow-wrap: break-word;
+    padding: 0 5px;
 `
 export const Button = styled.button`
     width: 100%;

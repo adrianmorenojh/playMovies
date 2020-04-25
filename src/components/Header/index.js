@@ -23,7 +23,7 @@ export const Header = () => {
         <LinkHome to='/'>
           <Logo src='../../../public/assets/images/netflix.svg' alt='' />
         </LinkHome>
-        <LinkHome to='/register'>
+        <LinkHome to='/user'>
           <ImageProfile src='../../../public/assets/images/cuenta.svg' alt='' />
         </LinkHome>
       </Div>
