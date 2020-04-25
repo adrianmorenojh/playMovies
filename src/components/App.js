@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import { GlobalStyle } from './GlobalStyles'
 import { Header } from './Header'
 import { Home } from './Home'
@@ -7,7 +7,7 @@ import { Detail } from '../pages/Detail'
 import { MovieList } from './MovieList'
 import { Results } from './Results'
 import { Register } from '../pages/Register'
-
+import { User } from '../pages/User'
 export default () => {
   return (
     <>
@@ -19,6 +19,7 @@ export default () => {
         <MovieList path='/category/:category/' />
         <Results path='/results/:search' />
         <Register path='/register/' />
+        <User path='/user/' />
 
       </Router>
     </>
