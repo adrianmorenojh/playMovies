@@ -8,14 +8,14 @@ export const Movie = styled.div`
   margin: 10px 10px;
   box-shadow: 0 0 3px;
   border-radius: 5px;
-  max-width:280px;
-  height:400px;
+  max-width:350px;
+  height:440px;
   padding-bottom:5px;
   
 `
 export const Image = styled.img`
-  width: 280px;
-  height: 300px;
+  width: 350px;
+  height: 360px;
   border-radius: 5px;
 ${fadeIn('30s')}
 `

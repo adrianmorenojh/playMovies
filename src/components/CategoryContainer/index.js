@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Category } from './styles.js'
 import { MovieContainer } from '../MovieContainer'
-
-export const CategoryContainer = ({ category }) => {
-  const [state, setState] = useState([])
-  useEffect(() => {
-    const abortController = new window.AbortController()
-    const signal = abortController.signal
-    window.fetch(`https://yts.mx/api/v2/list_movies.json?genre=${category}`, { signal: signal })
-      .then(response => response.json())
-      .then(data => setState(data))
-
-    return function cleanup () {
-      abortController.abort()
+import { UseFetchData } from '../../Hooks/useFetchData'
+import { Loading } from '../../styles/Loading'
+export const CategoryContainer = React.memo(({ category }) => {
+  const { state } = UseFetchData({ category })
+  return (state.status === 'ok' ? <Category>
+    {
+      state.data.movies.map(movie => <MovieContainer key={movie.id} id={movie.id} src={movie.medium_cover_image} title={movie.title} genre={movie.genres[0]} rating={movie.rating} duration={movie.runtime} />)
     }
-  }, [])
+                                  </Category>
+    : state.status === 'error' ? <h1>Lo sentimos, Ha ocurrido un error</h1>
+      : <Loading />
 
-  return (state.length === 0 ? <h1>Loading...</h1>
-
-    : <Category>
-      {
-        state.data.movies.map(movie => <MovieContainer key={movie.id} id={movie.id} src={movie.medium_cover_image} title={movie.title} genre={movie.genres[0]} rating={movie.rating} duration={movie.runtime} />)
-      }
-      </Category>
   )
-}
+})

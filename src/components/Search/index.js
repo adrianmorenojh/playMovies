@@ -11,8 +11,9 @@ export const Search = ({ setState }) => {
   const handleSubmit = event => {
     event.preventDefault()
   }
+  // al darle click le pasamos al menu display 'none' mediante el state
+
   const handleClick = event => {
-    console.log('mundomundial')
     setState('none')
   }
   return (
