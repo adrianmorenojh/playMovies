@@ -19,6 +19,7 @@ export default () => {
       <Header />
 
       <Router>
+        <Home path='/home/' />
         <Home path='/' />
         <Detail path='/detail/:id/' />
         <MovieList path='/category/:category/' />
