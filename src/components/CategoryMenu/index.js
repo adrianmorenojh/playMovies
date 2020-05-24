@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BurgerMenu, H2, Link, Lista, ImageMenu } from './styles'
 import { Search } from '../Search'
 
-export const Menu = () => {
+function Menu () {
   const [state, setState] = useState('none')
   return (
     <>
@@ -20,3 +20,5 @@ export const Menu = () => {
     </>
   )
 }
+
+export default React.memo(Menu)

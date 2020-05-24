@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const Context = createContext()
 
-const Provider = ({ children }) => {
+const Provider = React.memo(({ children }) => {
   const [isAuth, setIsAuth] = useState(() => {
     return window.sessionStorage.getItem('user')
   })
@@ -24,6 +24,7 @@ const Provider = ({ children }) => {
     </Context.Provider>
   )
 }
+)
 export default {
   Provider,
   Consumer: Context.Consumer

@@ -4,7 +4,7 @@ import { Container, Span, H3, Image, Info, Button, ConfigButton, Icon, H1, H2 } 
 
 export const User = () => {
   const user = JSON.parse(window.sessionStorage.getItem('user'))
-  console.log(user)
+
   const { removeAuth } = useContext(Context)
   return (
     <Container>

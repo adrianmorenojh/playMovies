@@ -11,6 +11,7 @@ export const Movie = styled.div`
   max-width:350px;
   height:440px;
   padding-bottom:5px;
+  min-width:350px;
   
 `
 export const Image = styled.img`

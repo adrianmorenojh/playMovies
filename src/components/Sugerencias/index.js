@@ -16,7 +16,7 @@ function useSuggestions ({ id }) {
       abortController.abort()
     }
   }, [id])
-  console.log(sugerencia.status)
+
   return { sugerencia }
 }
 

@@ -9,11 +9,11 @@ export const MovieDetail = ({ id }) => {
   return (state.status === 'ok' ? <Container>
     <H1>{state.data.movie.title}</H1>
     <Div>
-      <Image src={state.data.movie.medium_cover_image} />
+      <Image src={state.data.movie.medium_cover_image} alt='cover' />
       <Info>
         <p>Rating : {state.data.movie.rating}</p>
-        <p>time : {state.data.movie.runtime}</p>
-        <p>generos : {state.data.movie.genres[0]}</p>
+        <p>time : {state.data.movie.runtime}min</p>
+        {state.data.movie.genres ? <p>genero: {state.data.movie.genres[0]}</p> : <p>genero:  indefinido</p>}
         <p>lenguage : {state.data.movie.language}</p>leng
       </Info>
     </Div>
@@ -22,7 +22,7 @@ export const MovieDetail = ({ id }) => {
     <Background src={state.data.movie.background_image} />
     <H1>Peliculas Relacionadas</H1>
     <Sugerencias id={id} />
-  </Container>
+                                  </Container>
     : state.status === 'error' ? <h1>lo sentimos, ha ocurrido un error</h1>
       : <Loading />
   )

@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useCallback } from 'react'
 import { Container, Div, H1, Form, Input, Button } from './styles'
 import { Context } from '../../Context/ContextAuth'
 
-export const Register = () => {
+export const Register = React.memo(() => {
   const { activateAuth } = useContext(Context)
 
   const [state, setState] = useState({
@@ -27,11 +27,10 @@ export const Register = () => {
       }
     })
   }
-  const handleSubmit = event => {
+  const handleSubmit = useCallback(event => {
     event.preventDefault()
     activateAuth(state)
-  }
-  console.log(login)
+  }, [state])
 
   const loginSubmit = event => {
     event.preventDefault()
@@ -69,4 +68,4 @@ export const Register = () => {
     </Container>
 
   )
-}
+})

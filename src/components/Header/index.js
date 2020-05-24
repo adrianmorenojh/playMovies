@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Div, Logo, ImageProfile } from './styles'
 import { Link as LinkHome } from '@reach/router'
-import { Menu } from '../CategoryMenu'
-export const Header = () => {
+import Menu from '../CategoryMenu'
+function Header () {
   return (
     <Container>
       <Div>
@@ -17,3 +17,4 @@ export const Header = () => {
     </Container>
   )
 }
+export default React.memo(Header)

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalStyle } from './GlobalStyles'
-import { Header } from './Header'
+import Header from './Header'
 import { Home } from './Home'
 import { Router, Redirect } from '@reach/router'
 import { Detail } from '../pages/Detail'
@@ -12,7 +12,6 @@ import { Context } from '../Context/ContextAuth'
 
 export default () => {
   const { isAuth } = useContext(Context)
-  console.log(isAuth)
   return (
     <>
       <GlobalStyle />
