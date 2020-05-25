@@ -6,7 +6,7 @@ import { CategoryContainer } from '../CategoryContainer'
 export const Home = () => {
   return (
     <>
-      <Title>Peliculas Reacomendadas</Title>
+      <Title>Peliculas Recomendadas</Title>
       <CategoryContainer category='all' />
       <Title>Action</Title>
       <CategoryContainer category='action' />

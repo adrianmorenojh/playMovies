@@ -18,8 +18,9 @@ export const ArrowsContainer = styled.div`
   margin-top:15px ;
   background-color: #071338;
 `
-export const Image = styled.img`
+export const Div = styled.div`
   margin: 0 10px;
   height: 50px;
- display:${props => props.none ? 'none' : 'block'};
+  width:50px;
+ opacity:${props => props.none ? '.3' : '1'};
 `

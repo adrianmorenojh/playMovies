@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Context } from '../../Context/ContextAuth'
-import { Container, Span, H3, Image, Info, Button, ConfigButton, Icon, H1, H2 } from './styles'
-
+import { Container, Span, H3, Image, Info, Button, ConfigButton, H1, H2 } from './styles'
 export const User = () => {
   const user = JSON.parse(window.sessionStorage.getItem('user'))
 
@@ -22,7 +21,6 @@ export const User = () => {
       </Info>
       <ConfigButton>
           configuraciones.
-        <Icon src='../../../public/assets/images/configuration.svg' />
       </ConfigButton>
       <Button onClick={removeAuth}>
           Cerrar Sesion.

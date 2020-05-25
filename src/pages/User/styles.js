@@ -62,12 +62,6 @@ export const ConfigButton = styled.button`
     font-size: 1em;
     font-weight: 700;
 `
-export const Icon = styled.img`
-    width:40px;
-    line-height:40px;
-    margin: 0 5px;
-
-`
 export const H1 = styled.h1`
     font-weight:900;
     margin: 15px 0;
