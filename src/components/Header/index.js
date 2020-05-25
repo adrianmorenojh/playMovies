@@ -1,17 +1,21 @@
 import React from 'react'
-import { Container, Div, Logo, ImageProfile } from './styles'
+import { Container, Div, Image } from './styles'
 import { Link as LinkHome } from '@reach/router'
 import Menu from '../CategoryMenu'
+import Icon from './icons/icon'
+import User from './icons/user'
 function Header () {
   return (
     <Container>
       <Div>
         <Menu />
         <LinkHome to='/'>
-          <Logo src='../../../public/assets/images/netflix.svg' alt='' />
+          <Icon />
         </LinkHome>
         <LinkHome to='/user'>
-          <ImageProfile src='../../../public/assets/images/cuenta.svg' alt='' />
+          <Image>
+            <User />
+          </Image>
         </LinkHome>
       </Div>
     </Container>

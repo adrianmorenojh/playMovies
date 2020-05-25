@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const Container = styled.div`
     height: 75px;
     position: fixed;
@@ -19,14 +18,10 @@ export const Div = styled.div`
   background-color: #071338;
   box-shadow: 0 0 5px black;
 `
-export const Logo = styled.img`
-  width: 70px;
-`
 
-export const ImageProfile = styled.img`
+export const Image = styled.div`
   position: absolute;
-  top: 15px;
+  top: 12px;
   right: 13px;
-  width: 40px;
-`
 
+`

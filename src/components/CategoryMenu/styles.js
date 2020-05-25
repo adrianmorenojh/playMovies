@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
-export const ImageMenu = styled.img`
+export const Div = styled.div`
   position: absolute;
-  top: 15px;
+  top: 12px;
   left: 13px;
-  width: 40px;
+
 `
 
 export const BurgerMenu = styled.div`
