@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Category = styled.div`
-  display: flex;
-  overflow: scroll;
-  overflow-y: hidden;
-  padding: 10px 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
 `

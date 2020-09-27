@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from './styles'
 import { MovieContainer } from '../MovieContainer'
-
+import { ErrorContainer } from '../ErrorContainer'
+import {Loading} from '../../styles/Loading'
 function useSearch ({ search }) {
   const [state, setState] = useState([])
   useEffect(() => {
@@ -14,8 +15,8 @@ function useSearch ({ search }) {
 
 export const Results = ({ search }) => {
   const { state } = useSearch({ search })
-  return (state.length === 0 ? <h1>Loading...</h1>
-    : state.data.movie_count === 0 ? <h1>no se obtuvieron resultados</h1>
+  return (state.length === 0 ? <Loading />
+    : state.data.movie_count === 0 ? <ErrorContainer> no se obtuvieron resultados</ErrorContainer>
 
       : <Container>
         {

@@ -7,7 +7,10 @@ justify-content:center;
 `
 
 export const H1 = styled.h1`
-    text-align:center;
+font-size: 1.5em;
+color:white;
+margin:5px 0 10px 25px;
+font-weight: 500;
 `
 
 export const ArrowsContainer = styled.div`
@@ -15,8 +18,7 @@ export const ArrowsContainer = styled.div`
   width:100%;
   align-items:center;
   justify-content:center;
-  margin-top:15px ;
-  background-color: #071338;
+  margin-bottom: 55px;
 `
 export const Div = styled.div`
   margin: 0 10px;

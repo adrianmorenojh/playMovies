@@ -3,9 +3,10 @@ import { Category } from './styles.js'
 import { MovieContainer } from '../MovieContainer'
 import { UseFetchData } from '../../Hooks/useFetchData'
 import { Loading } from '../../styles/Loading'
-
+import { ErrorContainer } from '../ErrorContainer'
 export const CategoryContainer = React.memo(({ category }) => {
   const { state } = UseFetchData({ category })
+
   return (state.status === 'ok' ? <Category>
     {
       state.data.movies.map(movie => <MovieContainer
@@ -19,8 +20,8 @@ export const CategoryContainer = React.memo(({ category }) => {
       />)
     }
   </Category>
-    : state.status === 'error' ? <h1>Lo sentimos, Ha ocurrido un error</h1>
-      : <Loading />
+    : state.status === 'error' ? <ErrorContainer>Lo sentimos, Ha ocurrido un error</ErrorContainer>
+      :<Loading />
 
   )
 })

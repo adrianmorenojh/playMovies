@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
 export const Image = styled.img`
-    width:340px ;
-    height:360px;
+@media(max-width: 480px){
+    width:100%;
+    height: 100%;
+
+}
+    height: 76%;
+    width: 480px;
 
     
 `
@@ -10,5 +15,8 @@ export const Container = styled.div`
     display :flex;
     align-items:center;
     justify-content:center;
-    width:100%
+    flex-wrap:wrap;
+    width:100vw;
+    height: calc(100vh - 60px);
+    background:#1c273a;
 `

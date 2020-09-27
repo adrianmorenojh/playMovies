@@ -1,29 +1,35 @@
 import React from 'react'
-import { Container, Div, Info, Image, H1, Background } from './styles'
+import {  Div, Info, Image, H1, Reproductor, Details, Title, Container, P, InfoP } from './styles'
 import { Sugerencias } from '../Sugerencias'
 import { UseFetchDetail } from '../../Hooks/useFetchDetail'
 import { Loading } from '../../styles/Loading'
+import { GiRoundStar } from "react-icons/gi";
+import { ErrorContainer } from '../ErrorContainer'
 
 export const MovieDetail = ({ id }) => {
   const { state } = UseFetchDetail({ id })
-  return (state.status === 'ok' ? <Container>
-    <H1>{state.data.movie.title}</H1>
+  return (state.status === 'ok' ? 
+  <Container>
     <Div>
-      <Image src={state.data.movie.medium_cover_image} alt='cover' />
-      <Info>
-        <p>Rating : {state.data.movie.rating}</p>
-        <p>time : {state.data.movie.runtime}min</p>
-        {state.data.movie.genres ? <p>genero: {state.data.movie.genres[0]}</p> : <p>genero:  indefinido</p>}
-        <p>lenguage : {state.data.movie.language}</p>leng
-      </Info>
+      <Image src={state.data.movie.large_cover_image} alt='cover' />
+      <Details>
+        <Title>
+          <H1>{state.data.movie.title}</H1>
+        </Title>
+      </Details>
     </Div>
+      <Info>
+        <InfoP><GiRoundStar /> {state.data.movie.rating}</InfoP>
+        <InfoP>{state.data.movie.runtime} min</InfoP>
+        {state.data.movie.genres ? <InfoP>{state.data.movie.genres[0]}</InfoP> : <InfoP>genero:  indefinido</InfoP>}
+      </Info>
     <H1>Synopsis</H1>
-    <p>{state.data.movie.description_full}</p>
-    <Background src={state.data.movie.background_image} />
+    <P>{state.data.movie.description_full}</P>
+    <Reproductor src="https://www.youtube.com/embed/T_j60n1zgu0" controls poster={state.data.movie.background_image} />
     <H1>Peliculas Relacionadas</H1>
     <Sugerencias id={id} />
                                   </Container>
-    : state.status === 'error' ? <h1>lo sentimos, ha ocurrido un error</h1>
+    : state.status === 'error' ? <ErrorContainer>lo sentimos, ha ocurrido un error</ErrorContainer>
       : <Loading />
   )
 }

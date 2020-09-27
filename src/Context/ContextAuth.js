@@ -28,5 +28,4 @@ const Provider = React.memo(({ children }) => {
 export default {
   Provider,
   Consumer: Context.Consumer
-
 }

@@ -48,13 +48,13 @@ export const Register = React.memo(() => {
   return (
     <Container>
       <Div>
-        <H1>Registrarse</H1>
+        <H1>Crear Cuenta</H1>
         <Form onSubmit={handleSubmit}>
-          <Input type='text' placeholder='Nombre' value={state.data.name} name='name' onChange={handleChange} />
+          <Input type='text' placeholder='Nombre y Apellido' value={state.data.name} name='name' onChange={handleChange} />
           <Input type='text' placeholder='usuario' value={state.data.user} name='user' onChange={handleChange} />
           <Input type='email' placeholder='Email' value={state.data.email} name='email' onChange={handleChange} />
           <Input type='password' placeholder='contraseña' value={state.data.password} name='password' onChange={handleChange} />
-          <Button>Registrarse</Button>
+          <Button>Crear Cuenta</Button>
         </Form>
       </Div>
       <Div>

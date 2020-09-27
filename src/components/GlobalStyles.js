@@ -2,10 +2,11 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     body {
-    padding-top: 75px;
-    background-color: #dfe2e5;
+    padding-top: 60px;
+    background-color:  #21222a;
     margin: 0px;
-    height: 100vh;
+    overflow-x:hidden;
+    height: calc(100vh - 60px);
     font-family: "Montserrat", sans-serif;
     }
 `

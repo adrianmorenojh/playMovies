@@ -3,42 +3,56 @@ import { Link as LinkRouter } from '@reach/router'
 
 export const Div = styled.div`
   position: absolute;
-  top: 12px;
-  left: 13px;
+    top: 17px;
+    left: 20px;
+    z-index: 5;
+    background: #21222a;
+    display: flex;
+    border-radius: 2px;
 
 `
 
 export const BurgerMenu = styled.div`
+  overflow: overlay;
   position: absolute;
   height: 100vh;
   width: 100%;
-  top: 75px;
-  padding: 5px;
+  top: 3px;
+  z-index:4;
+  padding: 0px;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid black;
+  // font-family: 'Lato', sans-serif;
   display: ${props => props.display};
 `
 
 export const Lista = styled.ul`
-  padding: 0;
-  margin: 0;
-display:grid;
+padding:0;
+margin:0;
+width:100%;
 `
 export const H2 = styled.h2`
-  height: 55px;
-  padding: 15px 0;
-  text-align: center;
-  color: white;
-  margin: 0;
-  font-size: 1.5em;
-  box-sizing: border-box;
+    position: absolute;
+    font-weight: 700;
+    font-size: 36px;
+    top: 100px;
+    left: 45px;
+    color: white;
+`
+export const Li = styled.li`
+margin: 0;
+position: relative;
+max-width:100%;
+width: 100vw;
+height: 200px;
+background-position: center;
+background-size: cover;
+background-image: linear-gradient(
+  to top,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(0, 0, 0, 0) 100%),
+   url(${props=> props.image})
+;
 `
 export const Link = styled(LinkRouter)`
-  height: 43px;
-  box-shadow: 0px 0px 1px;
-  color: white;
-  font-size: 20px;
-  box-sizing: border-box;
-  padding: 7px;
-  text-align: center;
+
 `

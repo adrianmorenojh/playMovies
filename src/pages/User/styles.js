@@ -1,25 +1,21 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 340px;
-  max-width:340px;
-  display: block;
-  margin: 15px auto;
-  text-align: center;
-  box-shadow: 0 0 5px;
-  padding:3px;
+  width:100vw;
+  height: calc(100vh - 110px);
 `
 export const Image = styled.img`
   border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  height: 170px;
+  width: 170px;
   margin: 0 auto;
-  box-shadow: 0 0 10px;
 `
 
 export const Info = styled.div`
   text-align: left;
   overflow-wrap: break-word;
+  color:white;
+  margin: 45px 0 0;
 `
 
 export const Span = styled.span`
@@ -28,48 +24,69 @@ export const Span = styled.span`
   opacity: 0.5;
 `
 export const H3 = styled.h3`
-    margin: 0 0 10px 0;
-    width: 98%;
-    max-width:340px;
-    font-size:1.1em;
+    margin: 0 0 2px 0;
+    width: 100%;
+    font-size:1em;
+    font-weight:700;
+    padding-left: 10px;
+    box-sizing: border-box;
     overflow-wrap: break-word;
-    padding: 0 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background: #2b303b;
 `
 export const Button = styled.button`
     width: 100%;
-    height:45px;
-    background-color:#071338;
+    height:50px;
     border: none;
-    border-radius: 5px;
-    color:white;
     font-family: "Montserrat",sans-serif;
     font-weight: bold;
     font-size: 20px;
-    box-shadow: 0 0 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(200, 200, 200);
+
+    color: #21222a;
 `
 export const ConfigButton = styled.button`
     width: 100%;
     height:45px;
-    border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color:#CACFD2;
-    margin-top:5px;
+    justify-content: end;
+    background-color:#2b303b;
+    margin-top:2px;
     font-family: "Montserrat",sans-serif;
-    box-shadow:0 0 2px;
+    border:none;
+    color:white;
     margin-bottom: 1px;
     font-size: 1em;
     font-weight: 700;
-`
-export const H1 = styled.h1`
-    font-weight:900;
-    margin: 15px 0;
-    font-size: 30px;
-
+    padding-left: 10px;
 `
 export const H2 = styled.h2`
-    font-weight:900;
-    font-size:26px;
+    font-weight: 600;
+    font-size: 26px;
+    color: white;
     
+`
+export const Profile = styled.div`
+box-shadow: 0px 0px 10px 0px;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 375px;
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+    position:relative;
+    // background: #2b303b;
+}
+`
+export const Icon = styled.div`
+  margin: 0 5px 0 0;
+  display:flex;
 `

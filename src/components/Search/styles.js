@@ -1,39 +1,48 @@
 import styled from 'styled-components'
 
 export const Buscador = styled.form`
-margin-top: 10px;
-display: flex;
-    justify-content: center;
+margin: 0 20px;
+width: 300px;
+vertical-align: middle;
+white-space: nowrap;
+position: relative;
+display:flex;
+align-items: center;
+justify-content: center;
 `
-export const Submit = styled.input`
-  width: 100px;
-  height: 35px;
+export const Submit = styled.button`
+  width: 35px;
+  height: 40px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 0px 3px 3px 0px;
   font-family: "Montserrat", sans-serif;
-  color: white;
-  background-color: #071338;
+  background-color: #2b303b;
   border: none;
-  box-shadow: 0 0 1px white;
-  margin: 0 5px;
-  ::-webkit-input-placeholder {
-  color: white !important;
-  font-family: "Montserrat", sans-serif;
-}
+  margin: 0;
+  padding: 7px 0;
+  
 `
 export const Input = styled.input`
-  margin: 0 10px;
-  border: none;
-  box-shadow: 0 0 1px white;
-  border-radius: 5px;
-  padding: 0 0 0 10px;
-  height: 35px;
-  width: 300px;
-  background-color: #172654;
-  font-size: 16px;
-  color:white;
+width: 260px;
+height: 40px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #63717f;
+padding-left: 25px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 3px 0 0 3px;
+:hover {
+  outline:none;
+  background: #474952;
+
+}
+
   ::-webkit-input-placeholder {
-  color: white !important;
+  color: #65737e; !important;
   font-family: "Montserrat", sans-serif;
+  font-weight:600;
 }
 `

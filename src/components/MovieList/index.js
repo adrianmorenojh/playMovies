@@ -3,12 +3,12 @@ import { Container, H1, ArrowsContainer, Div } from './styles'
 import { MovieContainer } from '../MovieContainer'
 import { UseFetchData } from '../../Hooks/useFetchData'
 import { Loading } from '../../styles/Loading'
-import Next from './icons/next.js'
-import Previus from './icons/previus.js'
+import { MdNavigateBefore, MdNavigateNext  } from "react-icons/md";
+
 export const MovieList = ({ category }) => {
   const { state, number, setNumber } = UseFetchData({ category })
+  console.log(state)
   return (state.status === 'ok' ? <>
-
     <H1>{category}</H1>
     <Container>
 
@@ -17,11 +17,11 @@ export const MovieList = ({ category }) => {
       }
     </Container>
     <ArrowsContainer>
-      {number === 1 ? <Div none onClick={() => setNumber(number - 1)}><Previus /></Div>
-        : <Div onClick={() => setNumber(number - 1)}><Previus /></Div>}
+      {number === 1 ? <Div none onClick={() => setNumber(number - 1)}><MdNavigateBefore size= '50px' color ='#cfd8da' /></Div>
+        : <Div onClick={() => setNumber(number - 1)}><MdNavigateBefore size= '50px' color ='#cfd8da' /></Div>}
 
-      {number === 10 ? <Div none onClick={() => setNumber(number + 1)}><Next /></Div>
-        : <Div onClick={() => setNumber(number + 1)}><Next /></Div>}
+      {number === 10 ? <Div none onClick={() => setNumber(number + 1)}><MdNavigateNext size= '50px' color ='#cfd8da'/></Div>
+        : <Div onClick={() => setNumber(number + 1)}><MdNavigateNext size= '50px' color ='#cfd8da' /></Div>}
     </ArrowsContainer>
                                   </>
     : state.status === 'error' ? <h1>Ha ocurrido un error</h1>
