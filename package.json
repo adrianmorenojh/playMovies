@@ -1,5 +1,4 @@
 {
-  "homepage": "https://adrianmorenojh.github.io/playmovies.github.io",
   "name": "proyecto",
   "version": "1.0.0",
   "description": "",
@@ -8,9 +7,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development ",
     "lint": "standard",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist "
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
