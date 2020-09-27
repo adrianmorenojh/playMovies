@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const Div = styled.div`
   width: 90vw;
   height: 75vh;
+  min-height:450px;
   max-width: 375px;
   padding-top: 10px;
   margin: 5px auto;
