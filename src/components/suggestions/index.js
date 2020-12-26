@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Container } from './styles'
 import { MovieContainer } from '../MovieContainer'
 import { Loading } from '../../styles/Loading'
+
 function useSuggestions ({ id }) {
   const [sugerencia, setSugerencia] = useState([])
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Movie, Image, Link } from './styles'
 
-export const MovieContainer = ({ id, src , title, genre, rating, duration }) => {
+export const MovieContainer = ({ id, src }) => {
   return (
     <Movie>
       <Link to={`/detail/${id}`}>

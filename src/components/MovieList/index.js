@@ -13,7 +13,7 @@ export const MovieList = ({ category }) => {
     <Container>
 
       {
-        state.data.movies.map(movie => <MovieContainer key={movie.id} id={movie.id} src={movie.medium_cover_image} title={movie.title} genre={movie.genres[0]} rating={movie.rating} duration={movie.runtime} />)
+        state.data.movies.map(movie => <MovieContainer key={movie.id} id={movie.id} src={movie.medium_cover_image}/>)
       }
     </Container>
     <ArrowsContainer>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Buscador, Input, Submit } from './styles.js'
 import { Link } from '@reach/router'
-import { GrFormSearch } from "react-icons/gr";
 import { AiOutlineSearch } from "react-icons/ai";
 
 export const Search = ({ setState }) => {
@@ -15,12 +14,12 @@ export const Search = ({ setState }) => {
   }
   // al darle click le pasamos al menu display 'none' mediante el state
 
-  const handleClick = event => {
+  const handleClick =() => {
     setState('none')
   }
   return (
     <Buscador onSubmit={handleSubmit}>
-      <Input type='search' placeholder='Buscar Pelicula' value={pelicula.value} onChange={handleChange} />
+      <Input type='search' placeholder='Buscar Pelicula..' value={pelicula.value} onChange={handleChange} />
       <Link to={`/results/${pelicula.value}`}>
         <Submit value='submit' onClick={handleClick} >
           {/* <GrFormSearch size='25px' color='#a0a5ab!'/> */}

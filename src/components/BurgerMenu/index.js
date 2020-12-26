@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import { BurgerMenu, H2, Link, Lista, Div, Li } from './styles'
-import {HiMenuAlt1} from 'react-icons/hi'
+import { Container, H2, Link, Lista, Div, Li, P } from './styles'
+import { HiMenuAlt1 } from 'react-icons/hi'
 
-function Menu () {
+function BurgerMenu () {
   const [state, setState] = useState('none')
   return (
     <>
       <Div onClick={() => state === 'none' ? setState('block') : setState('none')}>
-
-        <HiMenuAlt1 size= '25px' color= '#a0a5ab' />
+        <HiMenuAlt1 size= '20px' color= '#a0a5ab' /> <P>Generos</P>
       </Div>
-      <BurgerMenu display={state}>
+      <Container display={state}>
         <Lista>
           <Link to ='/category/action' onClick={() => setState('none')}>
             <Li image={'https://st-listas.20minutos.es/images/2014-12/391061/4600591_640px.jpg?1518457160'}>
@@ -33,9 +32,9 @@ function Menu () {
             </Li>
           </Link>
         </Lista>
-      </BurgerMenu>
+      </Container>
     </>
   )
 }
 
-export default React.memo(Menu)
+export default React.memo(BurgerMenu)

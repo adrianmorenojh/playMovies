@@ -1,21 +1,35 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-// background: #4b5364;
-background: #21222a;
-
+    // background: #4b5364;
+    background: rgb(119,125,126);
+    max-width:900px;
+    margin:0 auto;
+    @media (max-width:768px){
+        background: none;
+    }
 `
 export const Div = styled.div`
     max-width: 100vw;
-    height: 75vh;
+    height: calc(100vh - 60px - 50px - 60px);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-height:420px){
+    height: calc(100vh - 99px);
+    }
 `
 export const Image = styled.img`
-    max-width: 100vw;
-    width: 100vw;
-    height: 75vh;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
     position: absolute;
     z-index: 0;
+    @media (max-height:480px){
+        max-width: 380px;
+    }
 `
 export const Details = styled.div`
     display: flex;
@@ -40,7 +54,7 @@ export const Title = styled.div`
 export const Info = styled.div`
     box-sizing:border-box;
     display: flex;
-    width: 100vw;
+    width: 100%;
     padding: 5px;
     align-items: center;
     justify-content: space-around;
@@ -59,9 +73,9 @@ export const H1 = styled.h1`
     color:white;
 `
 export const Reproductor = styled.video`
-width: 100%;
-margin-bottom:15px;
-margin: 10px 0 20px;
+    width: 100%;
+    margin-bottom:15px;
+    margin: 10px 0 20px;
 `
 export const P = styled.p`
     padding: 0 15px;
@@ -70,4 +84,12 @@ export const P = styled.p`
 `
 export const InfoP = styled.p`
     display:flex;
+`
+export const FavIcon = styled.div`
+    position:absolute;
+    top: 3px;
+    right: 5px;
+    z-index:4;
+    cursor:pointer;
+    color: white;
 `
