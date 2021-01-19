@@ -23,11 +23,11 @@ export default () => {
       <Header />
 
       <Router>
-        <Home path="/home/" />
-        <Home path="/" />
         <Detail path="/detail/:id/" />
         <MovieList path="/category/:category/" />
         <Results path="/results/:search" />
+        <Home path="/home/" />
+        <Home path="/" />
         {!isAuth && <Redirect noThrow from="/watchlater" to="/register" />}
         {!isAuth && <Redirect noThrow from="/user" to="/register" />}
         {isAuth && <Redirect noThrow from="/register" to="/" />}
