@@ -3,6 +3,7 @@ import { GlobalStyle } from "./GlobalStyles";
 import Header from "./Header";
 import { Home } from "./Home";
 import { Router, Redirect } from "@reach/router";
+
 import { Detail } from "../pages/Detail";
 import { MovieList } from "./MovieList";
 import { Results } from "./Results";
