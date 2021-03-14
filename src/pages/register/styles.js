@@ -51,6 +51,11 @@ export const Input = styled.input`
       font-weight:600;
     }
 `;
+export const P = styled.p`
+  text-align: center;
+  opacity: 0.8;
+`;
+
 export const Button = styled.button`
   margin: 25px 0;
   width: 100%;

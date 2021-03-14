@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import registerService from "../../services/register";
-import { Container, Div, Form, Input, Button, H2, H1 } from "./styles";
+import { Container, Div, Form, Input, Button, H2, H1, P } from "./styles";
 import { useForm } from "react-hook-form";
-
+import { Link } from "@reach/router";
 export const Register = () => {
   const { handleSubmit, register, errors } = useForm();
 
@@ -45,6 +45,9 @@ export const Register = () => {
             <Button>Login</Button>
           )}
         </Form>
+        <P>
+          you have an account? <Link to="/login">login</Link>
+        </P>
       </Div>
     </Container>
   );
