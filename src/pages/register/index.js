@@ -1,54 +1,54 @@
-import React, { useState } from "react";
-import registerService from "../../services/register";
-import { Container, Div, Form, Input, Button, H2, H1, P } from "./styles";
-import { useForm } from "react-hook-form";
-import { Link } from "@reach/router";
+import React, { useState } from 'react'
+import registerService from '../../services/register'
+import { Container, Div, Form, Input, Button, H2, H1, P } from './styles'
+import { useForm } from 'react-hook-form'
+import { Link } from '@reach/router'
 export const Register = () => {
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register, errors } = useForm()
 
-  const [registered, setRegistered] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [registered, setRegistered] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const onSubmit = (values) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     registerService(values).then(() => {
-      setRegistered(true);
-      setIsSubmitting(false);
-    });
-  };
+      setRegistered(true)
+      setIsSubmitting(false)
+    })
+  }
 
   if (registered) {
-    return <H1>Congratulations ✅! You've been successfully registered!</H1>;
+    return <H1>Felicidades ✅, Te has registrado correctamente!</H1>
   }
 
   return (
     <Container>
       <Div>
-        <H2>Register</H2>
+        <H2>Registro</H2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input
-            name="username"
-            placeholder="Put here the username"
-            ref={register({ required: "This is required" })}
+            name='username'
+            placeholder='Nombre de usuario'
+            ref={register({ required: 'Campo requerido' })}
           />
 
           <Input
-            name="password"
-            placeholder="Put here the password"
-            ref={register({ required: "This is required" })}
-            type="password"
+            name='password'
+            placeholder='Contraseña'
+            ref={register({ required: 'Campo requerido' })}
+            type='password'
           />
 
           {isSubmitting ? (
-            <Button disabled="disabled">Login</Button>
+            <Button disabled='disabled'>Registrarse</Button>
           ) : (
-            <Button>Login</Button>
+            <Button>Registrarse</Button>
           )}
         </Form>
         <P>
-          you have an account? <Link to="/login">login</Link>
+         ya tienes una cuenta? <Link to='/login'>Inicia sesion</Link>
         </P>
       </Div>
     </Container>
-  );
-};
+  )
+}

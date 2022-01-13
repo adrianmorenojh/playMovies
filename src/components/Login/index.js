@@ -1,25 +1,25 @@
-import React, { useContext } from "react";
-import { Link } from "./styles";
+import React, { useContext } from 'react'
+import { Link, Div } from './styles'
 
-import useUser from "../../Hooks/useUser";
-import Context from "../../Context/userContext";
+import useUser from '../../Hooks/useUser'
+import Context from '../../Context/userContext'
 export const Login = () => {
-  const { logout } = useUser();
-  const { isAuth } = useContext(Context);
+  const { logout } = useUser()
+  const { isAuth } = useContext(Context)
 
   const handleClick = (e) => {
-    e.preventDefault();
-    logout();
-  };
+    e.preventDefault()
+    logout()
+  }
   return (
-    <div>
+    <Div>
       {isAuth ? (
-        <Link to="/" onClick={handleClick}>
-          Logout
+        <Link to='/' onClick={handleClick}>
+          Cerrar sesion
         </Link>
       ) : (
-        <Link to="/login">Login</Link>
+        <Link to='/login'>Iniciar sesion</Link>
       )}
-    </div>
-  );
-};
+    </Div>
+  )
+}

@@ -47,18 +47,22 @@ export const Container = styled.div`
   @media(max-width:480px){
     top: 3px;
   }
+@media(max-width:480px){
+  width: 100vw;
+}
 `
 
 export const Lista = styled.ul`
   padding: 0;
   margin: 60px 0 0 85px;
   width: 35%;
-  height: calc( 100vh - 60px );
+  height : 100vh;
+  //height: calc( 100vh - 52px );
   overflow-y: scroll;
   overflow-x:none;
   :: -webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 4px;
+    //height: 10px;
   }
   ::-webkit-scrollbar-thumb {
     background: #ccc;
@@ -96,7 +100,7 @@ export const Li = styled.li`
     to top,
     rgba(0, 0, 0, 0.6) 0%,
     rgba(0, 0, 0, 0) 100%),
-    url(${props=> props.image})
+    url(${props => props.image})
   ;
 `
 export const Link = styled(LinkRouter)`

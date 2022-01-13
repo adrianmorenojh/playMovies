@@ -26,3 +26,6 @@ export const Div = styled.div`
   width:50px;
  opacity:${props => props.none ? '.3' : '1'};
 `
+export const Section = styled.section`
+margin-bottom: 60px;
+`

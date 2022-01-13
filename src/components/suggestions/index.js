@@ -27,7 +27,7 @@ export const Sugerencias = ({ id }) => {
     {
       sugerencia.data.movies.map(movie => <MovieContainer key={movie.id} id={movie.id} src={movie.medium_cover_image} title={movie.title} genre={movie.genres[0]} rating={movie.rating} duration={movie.runtime} />)
     }
-                                       </Container>
+  </Container>
     : sugerencia.status === 'error' ? <h1>Lo sentimos, ha ocurrido un error</h1>
       : <Loading />
 

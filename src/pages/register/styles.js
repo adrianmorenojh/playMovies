@@ -1,12 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const Container = styled.section`
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: 82vh;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+/*@media(max-height:480px){
+  top: 3px;
+}*/
+`
 export const Div = styled.div`
   min-height: 470px;
   max-width: 375px;
@@ -17,19 +20,19 @@ export const Div = styled.div`
   width: 25%;
   height: 45%;
   background: rgb(230, 230, 230);
-`;
+`
 export const H2 = styled.h2`
   text-align: center;
   margin: 30px 0;
-`;
+`
 export const H1 = styled.h2`
   text-align: center;
   margin: 30px 0;
   color: white;
-`;
+`
 export const Form = styled.form`
   display: block;
-`;
+`
 export const Input = styled.input`
     width: 100%;
     margin-bottom: 10px;
@@ -42,19 +45,19 @@ export const Input = styled.input`
     :hover {
       outline:none;
       background: rgb(225, 225, 225);
-    
+
     }
-    
+
       ::-webkit-input-placeholder {
       color: #65737e; !important;
       font-family: "Montserrat", sans-serif;
       font-weight:600;
     }
-`;
+`
 export const P = styled.p`
   text-align: center;
   opacity: 0.8;
-`;
+`
 
 export const Button = styled.button`
   margin: 25px 0;
@@ -73,4 +76,4 @@ export const Button = styled.button`
       opacity: 0.2;
       cursor: wait;
     `};
-`;
+`
