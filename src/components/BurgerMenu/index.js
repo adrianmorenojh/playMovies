@@ -12,22 +12,22 @@ function BurgerMenu () {
       <Container display={state}>
         <Lista>
           <Link to='/category/action' onClick={() => setState('none')}>
-            <Li image='../../../public/assets/images/action.jpg'>
+            <Li image='https://i.blogs.es/8cb1c2/mejores-peliculas-accion-2021/1366_2000.jpeg'>
               <H2>Accion</H2>
             </Li>
           </Link>
           <Link to='/category/mystery' onClick={() => setState('none')}>
-            <Li image='../../../public/assets/images/terror.jpg'>
+            <Li image='https://s3.cine3.com/2021/12/peliculas-de-terror-mas-esperadas-2022-destacada.png'>
               <H2>Terror</H2>
             </Li>
           </Link>
           <Link to='/category/animation' onClick={() => setState('none')}>
-            <Li image='../../../public/assets/images/animation.jpg'>
+            <Li image='https://www.lasopa.com/wp-content/uploads/2021/05/mejores-peliculas-disney.jpg'>
               <H2>Animadas</H2>
             </Li>
           </Link>
           <Link to='/category/all' onClick={() => setState('none')}>
-            <Li image='../../../public/assets/images/popular.jpg'>
+            <Li image='https://s1.eestatic.com/2019/12/17/series/cine/cine_452716408_140701018_1706x960.jpg'>
               <H2>Populares</H2>
             </Li>
           </Link>
